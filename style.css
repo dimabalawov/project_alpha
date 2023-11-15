@@ -1,0 +1,102 @@
+body
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 13%;
+    padding-right: 13%;
+    padding-top: .5%;
+
+}
+header
+{
+    display: flex;
+    width: 100%;
+}
+a, a:hover
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo
+{
+    color: rgb(237, 50, 55);
+    font-weight: bold;
+    display: inline-block;
+    font-size: 3em;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;  
+}
+.reg
+{
+    margin-top: .4em;
+    margin-bottom: .6em;
+    background-color: rgb(237, 50, 55);
+    border-radius: .2em;
+    color: white;
+    width: 8.5em;
+    padding-top: .2em;
+    height: 2em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    align-self: flex-end;
+    transition: transform .2s;
+    -moz-user-select: none;
+   -khtml-user-select: none;
+    user-select: none;  
+}
+.reg:hover
+{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
+.spacebetween
+{
+    width: 53%;
+    height: 1%;
+}
+.search
+{
+    margin-top: 1em;
+    margin-left: 1em;
+    height: 2em;
+    transition: transform .2s;
+}
+.search img
+{
+    height: 100%;
+}
+.search:hover
+{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+.modal-body
+{
+    display: flex;
+}
+.menu
+{
+    border: solid .1em lightgray;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    padding-left: 3%;
+    justify-content: center;
+}
+.menubtn
+{
+   padding-top: .6%;
+   text-align: center;
+   font-size: 1.3em;
+   font-weight: 600;
+   transition: transform .2s;
+   margin-right: 5%;
+}
+.menubtn:hover{
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+}
