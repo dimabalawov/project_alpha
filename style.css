@@ -1,10 +1,12 @@
+
 body
 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 13em;
     padding-right: 13em;
     padding-top: .5%;
-
+    min-width: 1100px;
+    overflow-x: hidden;
 }
 header
 {
@@ -40,7 +42,6 @@ a, a:hover
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
-    align-self: flex-end;
     transition: transform .2s;
     -moz-user-select: none;
    -khtml-user-select: none;
@@ -78,31 +79,82 @@ a, a:hover
 .modal-body
 {
     display: flex;
+    width: auto;
 }
 .menu
 {
     border: solid .1em lightgray;
     border-left: none;
     border-right: none;
-    width: 100%;
-    height: 3em;
+    width: auto;
+    height: auto;
     display: flex;
     padding-left: 3%;
     justify-content: center;
+    overflow: hidden;
 }
 .menubtn
 {
    padding-top: .6%;
-   text-align: center;
    font-size: 1.3em;
    font-weight: 600;
    transition: color .2s;
-   margin-right: 5%;
+   margin-right: 5em;
 }
 .menubtn:hover{
     cursor: pointer;
     color: rgb(237, 50, 55);
 }
+
+ .hidden-menu
+ {
+    border: solid .1em lightgray;
+    border-left: none;
+    border-right: none;
+    width: auto;
+    height: auto;
+    display: flex;
+    padding-left: 3%;
+    overflow: hidden;
+    display: none;
+    font-weight: bold;
+    transition: color .15s;
+    font-size: larger;
+ }
+ .hidden-menu:hover
+ {
+    color: rgb(237, 50, 55);
+ }
+ @media (max-width: 198vh) {
+    body
+    {
+        padding-left: 5vh;
+        padding-right: 13vh;
+    }
+    .menu
+    {
+        display: none;
+    }
+    .hidden-menu{
+        display: flex;
+    }
+    
+    .spacebetween
+    {
+        margin-left: 3em;
+        justify-content: flex-start;
+    }
+}
+.hidden-category
+{
+    font-weight: bold;
+    transition: color .15s;
+    margin-left: 1em;
+}
+.hidden-category:hover{
+    color: rgb(237, 50, 55);
+}
+
 .newsblock
 {
     border: solid .1em lightgray;
@@ -127,7 +179,7 @@ a, a:hover
 }
 .new
 {
-    height: 60%;
+    height: auto;
     width: 30%;
     font-size: 1.3em;
     font-weight: 600;
@@ -151,6 +203,47 @@ a, a:hover
     cursor: pointer;
     color: rgb(237, 50, 55);
 }
+.newsblock-hidden
+{
+    border: solid .1em lightgray;
+    border-top: none;
+    width: 100%;
+    height: auto;
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
+    display: none;
+}
+.newsblock-hidden span
+{
+    transition: color .15s;
+}
+.newsblock-hidden h1
+{
+    margin-left: 1.5%;
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: .5em;
+    margin-right: 1em;
+}
+.newsblock-hidden span:hover
+{
+    cursor: pointer;
+    color: rgb(237, 50, 55);
+}
+.newsblock-hidden .new
+{
+    margin-right: 1em;
+}
+@media (max-width: 152vh) {
+    .newsblock
+    {
+        display: none;
+    }
+    .newsblock-hidden{
+        display: flex;
+    }
+     }
 .date
 {
     opacity: .4;
@@ -171,4 +264,22 @@ footer .menu
     border: none;
     justify-content: start;
     padding-left: 0;
+}
+.icons
+{
+    margin-top: 1.5em;
+    display: flex;
+}
+.icons img
+{
+    width: 40px;
+    height: 40px;
+    margin-right: 3em;
+    transition: filter 0.15s;
+    filter: grayscale(1);
+}
+.icons>img:hover
+{
+    filter: grayscale(0);
+    cursor: pointer;
 }
